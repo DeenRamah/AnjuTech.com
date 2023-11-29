@@ -1,0 +1,495 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+:root{
+    --blue:#2980b9;
+    --red:tomato;
+    --orange:orange;
+    --black:#333;
+    --white:#fff;
+    --bg-color:#eee;
+    --dark-bg:rgba(0,0,0,.7);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid #999;
+ }
+
+html{
+    font-size: 62.5%;
+}
+body, ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header{
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+
+}
+
+#navbar {
+      
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+#navbar li {
+    font-size: 2em;
+   display: inline;
+   padding: 0 20px;
+}
+#navbar li a{
+    text-decoration: none;
+}
+/*----------search container----------------*/
+
+.search-container{
+    text-align: center;
+    margin: 2%;
+}
+#search-bar{
+    padding: 1em;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+#search-btn{
+    background-color: #007;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#search-btn:hover{
+    background-color: #b30024;
+}
+
+/*----------------Account-------------------*/
+.account-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.account-icon {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 3em;
+    height: 2em;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    font-size: 0.5em;
+    font-weight: bold;
+    padding: 12px 16px;
+    height: 2em;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.account-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*-------------------product card--------------------------*/
+
+.products main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    gap:1.5rem;
+    justify-content: center;
+
+ }
+
+ .products main .card{
+    text-align: start;
+    margin-top: 3em;
+    padding:1rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    width: 100%;
+    background-color: whitesmoke;
+    height: 55vh;
+ }
+
+ .products main .card .image{
+    height: 55%;
+ }
+
+
+ .products main .card .image  img{
+    height: 100%;
+    width: 100%;
+    
+    
+ }
+
+ .products main .card p{
+    margin:1rem 0;
+    font-size: 1.2rem;
+    color:var(--black);
+ }
+ .products main .card .btn {
+    width: 75%;
+    height: 2em;
+    color: white;
+    background-color: olive;
+    border-radius: 0.5em;
+    
+
+ }
+ .products main .card .btn:hover{
+    background-color: orange;
+ }
+
+ del{
+    text-decoration: line-through;
+}
+
+
+
+/*----------------------Message styling-------------------------*/
+.message{
+    background-color: var(--blue);
+    position: sticky;
+    top:0; left:0;
+    z-index: 10000;
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding:1.5rem 2rem;
+    margin:0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1.5rem;
+ }
+ 
+ .message span{
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+ .message i{
+    font-size: 2.5rem;
+    color:var(--black);
+    cursor: pointer;
+ }
+ 
+ .message i:hover{
+    color:var(--red);
+ }
+
+ 
+
+
+/* -----------------------SHOPPING CART STYLING---------------------------------*/
+
+.shopping-cart h1{
+    text-align: center;
+}
+
+.shopping-cart table{
+    text-align: center;
+    margin-left: 12rem;
+    margin-top: 3em;
+    max-width: 78%;
+    min-width: 240px;
+
+    
+    
+ }
+
+.shopping-cart table thead th{
+    padding:1.5rem;
+    font-size: 2rem;
+    color:var(--white);
+    background-color: olive;
+ }
+
+.shopping-cart table tr td{
+    border-bottom: var(--border);
+    padding:1.5rem;
+    font-size: 2rem;
+    color:var(--black);
+ }
+
+.shopping-cart table input[type="number"]{
+    border: var(--border);
+    padding:1rem 2rem;
+    font-size: 2rem;
+    color:var(--black);
+    width: 10rem;
+ }
+
+.shopping-cart table input[type="submit"]{
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: olive;
+    color:var(--white);
+ }
+
+.shopping-cart table input[type="submit"]:hover{
+    background-color: var(--black);
+ } 
+
+.shopping-cart table .table-bottom{
+    background-color: var(--bg-color);
+ }
+ 
+.shopping-cart .checkout-btn{
+    text-align: center;
+    margin-top: 1rem;
+ }
+ 
+.shopping-cart .checkout-btn a{
+    display: inline-block;
+    width: 10%;
+    background-color: olive;
+    border-radius: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6em;
+    color: white;
+    height: 3em;
+ }
+
+ .shopping-cart .checkout-btn a.disabled{
+    pointer-events: none;
+    opacity: .5;
+    user-select: none;
+    background-color: var(--red);
+ } 
+
+
+/*------------------------viewCart styling------------------------------*/
+h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+form {
+    display: inline-block;
+    margin: 0;
+}
+
+input[type="number"] {
+    width: 3.5em;
+    height: 2em;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: auto;
+    width: 5em;
+    border: none;
+    height: 2em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.option-btn {
+    font-size: 2em;
+    margin-left: 4rem;
+    background-color: #4caf50;
+    width: 5em;
+    color: white;
+    padding: 0.21em;
+    margin-top: 0.4em;
+    text-decoration: none;
+    border-radius: 0.2em;
+}
+
+.checkout-btn{
+    margin-left: 40rem;
+    font-size: 2em;
+    background-color: #4caf50;
+    color: white;
+    padding: 0.2em;
+    text-decoration: none;
+    border-radius: 0.2em;
+    width: 10em;
+
+}
+.checkout-btn .btn{
+    color: white;
+    text-decoration: none;
+
+}
+
+/* Additional styles as needed */
+
+
+/*---------------------------registration form-----------------*/
+h2{
+    font-size: 2em;
+
+}
+#register{
+    border-radius: 2em;
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    background-color: whitesmoke;
+    max-width: 45%;
+    align-items: center;
+    margin: 3% 20%;
+}
+form label{
+    font-size: 1.5em;
+    display: flex;
+}
+input[type ='text']  {
+    height: 3em;
+    width: 50%;
+    border-radius: 0.5em;
+}
+input[type='email'] {
+    height: 3em;
+    width: 50%;
+    border-radius: 0.5em;
+}
+input[type = 'password']{
+    height: 3em;
+    width: 30%;
+    border-radius: 0.5em;
+}
+input[type = 'date'] {
+    height: 3em;
+    width: 50%;
+    border-radius: 1em;
+    text-align: center;
+}
+input[type = 'submit'] {
+    padding: auto;
+    align-items: start;
+    width: 15%;
+    background-color: blue;
+    font-weight: bold;
+    margin-top: 1em;
+}
+form p{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+
+form a{
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: blue;
+}
+
+/*-------------------------LOGIN----------------------------------------*/
+#login{
+    border-radius: 2em;
+    display: flex;
+    height: 45vh;
+    flex-direction: column;
+    background-color: whitesmoke;
+    max-width: 45%;
+    align-items: center;
+    margin: 3% 20%;
+
+}
+
+/*-----------------------------checkout form---------------------------*/
+#checkout{
+    
+    border-radius: 2em;
+    border: 1em solid grey;
+    display: block;
+    height: 85vh;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+    max-width: 45%;
+    align-items: center;
+    margin: 3% 20%;
+    flex-wrap: wrap;
+    padding: 2.5em;
+}
+form span{
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 1em;
+    
+}
+#checkout input[type=text]{
+    width: 60%;
+    margin-right: 20%;
+    
+}
+#checkout input[type=submit]{
+    margin-left: 45%;
+}
+
+
+
+
+
+
